@@ -39,3 +39,16 @@ As the public debate was moving more to the extreme, we have come up with this i
 To achieve this goal, we are pinning down the facts, events and stories on a map. The map serves as a guide, which enables the user to quickly visualize what is happening and where. 
 
 [Visit Encyklopedie.org](http://encyklopedie.org)
+
+---
+
+## Gladwemet.ch
+
+**Artist management and production from Baden**
+
+![gladwemet.ch](gladwemet.png)
+
+At the beginning were three agencies based on both parts of the “Röstigraben”: Breathing Hole in Baden, Braise in Lausanne and Stagency in Berne. Three agencies, but the same pleasure to share music with great people. In 2017, we decided to combine forces as one agency which will be like a home, beyond any language border. With booking, managing and promoting artists we propose a full package supporting Swiss and foreign artists. Glad We Met.
+
+
+[Visit Gladwemet.ch](http://gladwemet.ch)

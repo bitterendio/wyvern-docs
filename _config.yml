@@ -70,4 +70,4 @@ theme: wyvern
 deploy:
   type: git
   repo: https://github.com/madesane/wyvern-docs.git
-  branch: master
+  branch: gh-pages
