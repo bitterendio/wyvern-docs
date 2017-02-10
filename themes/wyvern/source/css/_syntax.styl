@@ -1,0 +1,147 @@
+$code-font = 'Roboto Mono', Monaco, courier, monospace
+$code-font-size = .8em
+
+$orange  = #eba729
+$codebg = #f9f9f9
+
+$brand-attribute = #c792ea
+
+.gutter pre
+  color #999
+
+pre
+  color #6dc2ad
+  .function .keyword,
+  .constant
+    color #0092db
+  .keyword,
+  .attribute
+    color $brand-attribute
+  .number,
+  .literal
+    color #AE81FF
+  .tag,
+  .tag .title,
+  .change,
+  .winutils,
+  .flow,
+  .lisp .title,
+  .clojure .built_in,
+  .nginx .title,
+  .tex .special
+    color #ff505d
+  .class .title
+    color white
+  .symbol,
+  .symbol .string,
+  .value,
+  .regexp
+    color $orange
+  .title
+    color #A6E22E
+  .tag .value,
+  .string,
+  .subst,
+  .haskell .type,
+  .preprocessor,
+  .ruby .class .parent,
+  .built_in,
+  .sql .aggregate,
+  .django .template_tag,
+  .django .variable,
+  .smalltalk .class,
+  .javadoc,
+  .django .filter .argument,
+  .smalltalk .localvars,
+  .smalltalk .array,
+  .attr_selector,
+  .pseudo,
+  .addition,
+  .stream,
+  .envvar,
+  .apache .tag,
+  .apache .cbracket,
+  .tex .command,
+  .prompt
+    color $orange
+  .comment,
+  .java .annotation,
+  .python .decorator,
+  .template_comment,
+  .pi,
+  .doctype,
+  .deletion,
+  .shebang,
+  .apache .sqbracket,
+  .tex .formula
+    color #b3b3b3
+  .coffeescript .javascript,
+  .javascript .xml,
+  .tex .formula,
+  .xml .javascript,
+  .xml .vbscript,
+  .xml .css,
+  .xml .cdata
+    opacity 0.5
+    
+code, pre
+    font-family $code-font
+    font-size $code-font-size
+    background-color $codebg
+    -webkit-font-smoothing initial
+    -moz-osx-font-smoothing initial
+
+code
+    color $brand-attribute
+    padding 3px 5px
+    margin 0 2px
+    border-radius 2px
+    white-space nowrap
+    
+.highlight
+    overflow-x auto
+    position relative
+    padding 0
+    background-color $codebg
+    padding .8em .8em .4em
+    line-height 1.1em
+    border-radius $radius
+    margin-left 0
+    margin-right 0
+    table, tr, td
+        width 100%
+        border-collapse collapse
+        padding 0
+        margin 0
+    .gutter
+        width 1.5em
+    .code
+        $code-line-height = 1.5em
+        pre
+            padding 1.2em 1.4em
+            line-height $code-line-height
+            margin 0
+        .line
+            min-height $code-line-height
+    &.html, &.js, &.bash, &.css, &.php
+        .code:after
+            position absolute
+            top 0
+            right 0
+            color #ccc
+            text-align right
+            font-size .75em
+            padding 5px 10px 0
+            line-height 15px
+            height 15px
+            font-weight 600
+    &.html .code:after
+        content 'HTML'
+    &.js .code:after
+        content 'JS'
+    &.bash .code:after
+        content 'Shell'
+    &.css .code:after
+        content 'CSS'
+    &.php .code:after
+        content 'PHP'

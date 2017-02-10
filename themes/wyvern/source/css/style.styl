@@ -1,0 +1,108 @@
+@import '_syntax'
+
+$header-height = 60px
+$brand-primary = #27aae1
+$brand-hover = #333
+
+body
+	font-family 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+	margin 0
+	padding $header-height 0 0 0
+	
+*
+	box-sizing border-box
+
+a
+	color: $brand-hover
+	text-decoration none
+	&:hover, &.current
+		color $brand-primary
+
+#header
+	position fixed
+	width 100%
+	top 0
+	padding 10px 60px
+	z-index 2
+	background-color #fff
+
+#logo
+	display flex
+	float left
+
+#nav
+	list-style-type none
+	margin 0
+	padding 0
+	position absolute
+	right 60px
+	top 0
+	height $header-height
+	line-height $header-height
+	li
+		display inline-block
+		position relative
+		margin 0 .6em
+
+.menu
+	list-style-type none
+	margin 0
+	padding 0
+	li
+		padding: 5px 0
+
+#main
+	position relative
+	z-index 1
+	padding 0 60px 30px
+	overflow-x hidden
+
+.sidebar
+	position fixed
+	overflow-y auto
+	overflow-x hidden
+	padding 40px 0 30px 60px
+	left 0
+	bottom 0
+	top $header-height
+
+.content
+	max-width 600px
+	padding 2.2em 0
+	position relative
+	margin 0 auto
+	margin-left 290px
+	table
+		max-width 100%
+		th
+			text-align left
+			font-weight 700
+		code
+			white-space pre-wrap
+	a
+		color $brand-primary
+		&:hover
+			color $brand-hover
+
+.guide-links
+	height 1em
+
+.footer
+	margin-top 30px
+	font-size 0.75em
+	a
+		color #999
+		margin-top 20px
+		display block
+		
+
+ol.toc
+	list-style-type none
+	padding-left 10px
+	font-size 12px
+	ol
+		list-style-type none
+		padding-left 20px
+
+
+
