@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Routes — Wyvern</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Routes — Wyvern">
+        <meta property="og:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta property="og:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Routes — Wyvern">
+        <meta name="twitter:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="twitter:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+
+        <link rel="icon" href="https://madesane.github.io/wyvern-docs/images/favicon.png" type="image/x-icon">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel="stylesheet" href="https://madesane.github.io/wyvern-docs/css/style.css">
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-91648783-1', 'madesane.github.io/wyvern-docs');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">
+        <div id="header">
+  <a id="logo" href="https://madesane.github.io/wyvern-docs/">
+    <img src="https://madesane.github.io/wyvern-docs/images/logo.svg" height="30" width="151">
+  </a>
+  <ul id="nav">
+    <li><a href="https://madesane.github.io/wyvern-docs/" class="nav-link current">Guide</a></li>
+<li><a href="https://madesane.github.io/wyvern-docs/showcase/" class="nav-link">Showcase</a></li>
+<li><a href="https://github.com/madesane/wyvern" class="nav-link nav-link__github" target="_blank">Github</a></li>
+  </ul>
+</div>
+
+
+        <div id="main" class="fix-sidebar">
+                
+    <div class="sidebar">
+    <div class="list">
+        <h2>
+            Guide
+        </h2>
+        <ul class="menu">
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/index.html" class="sidebar-link">Installation</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/folder_structure.html" class="sidebar-link">Folder structure</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/mixins.html" class="sidebar-link">Mixin methods</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/events.html" class="sidebar-link">Events</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/routes.html" class="sidebar-link current">Routes</a>
+                    
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Override-in-child-theme"><span class="toc-text">Override in child theme</span></a></li></ol>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/page_templates.html" class="sidebar-link">Page templates</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/plugins.html" class="sidebar-link">Plugins</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/development.html" class="sidebar-link">Development</a>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar routes-guide">
+    
+      <h1>Routes</h1>
+    
+    <h2 id="Override-in-child-theme"><a href="#Override-in-child-theme" class="headerlink" title="Override in child theme"></a>Override in child theme</h2><p>Sometimes you need to override components in child theme. Wyvern registers some basic components like Page and then registers routes using these components.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// app.js</span></div><div class="line"><span class="keyword">import</span> Page <span class="keyword">from</span> <span class="string">'./page.vue'</span></div><div class="line">Vue.component(<span class="string">'Page'</span>, Page)</div></pre></td></tr></table></figure>
+<p>Now your child theme might need different layout for Page component, therefore after you register new component, use <strong>routes.refresh()</strong>.</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="comment">// main.js (for example child theme)</span></div><div class="line"><span class="keyword">import</span> Page <span class="keyword">from</span> <span class="string">'./page.vue'</span></div><div class="line">Vue.component(<span class="string">'Page'</span>, Page)</div><div class="line"></div><div class="line"><span class="comment">// Replace overridden components in existing routes</span></div><div class="line">routes.refresh()</div></pre></td></tr></table></figure>
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/events.html">Events</a></span>
+        
+        
+          <span style="float:right"><a href="/page_templates.html">Page templates</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+
+        <hr>
+
+      <a href="https://github.com/madesane/wyvern-docs/blob/master/source/routes.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+        </div>
+        <script src="https://madesane.github.io/wyvern-docs/js/smooth-scroll.min.js"></script>
+
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="https://madesane.github.io/wyvern-docs/js/common.js"></script>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Development — Wyvern</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Development — Wyvern">
+        <meta property="og:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta property="og:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Development — Wyvern">
+        <meta name="twitter:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="twitter:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+
+        <link rel="icon" href="https://madesane.github.io/wyvern-docs/images/favicon.png" type="image/x-icon">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel="stylesheet" href="https://madesane.github.io/wyvern-docs/css/style.css">
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-91648783-1', 'madesane.github.io/wyvern-docs');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">
+        <div id="header">
+  <a id="logo" href="https://madesane.github.io/wyvern-docs/">
+    <img src="https://madesane.github.io/wyvern-docs/images/logo.svg" height="30" width="151">
+  </a>
+  <ul id="nav">
+    <li><a href="https://madesane.github.io/wyvern-docs/" class="nav-link current">Guide</a></li>
+<li><a href="https://madesane.github.io/wyvern-docs/showcase/" class="nav-link">Showcase</a></li>
+<li><a href="https://github.com/madesane/wyvern" class="nav-link nav-link__github" target="_blank">Github</a></li>
+  </ul>
+</div>
+
+
+        <div id="main" class="fix-sidebar">
+                
+    <div class="sidebar">
+    <div class="list">
+        <h2>
+            Guide
+        </h2>
+        <ul class="menu">
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/index.html" class="sidebar-link">Installation</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/folder_structure.html" class="sidebar-link">Folder structure</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/mixins.html" class="sidebar-link">Mixin methods</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/events.html" class="sidebar-link">Events</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/routes.html" class="sidebar-link">Routes</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/page_templates.html" class="sidebar-link">Page templates</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/plugins.html" class="sidebar-link">Plugins</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/development.html" class="sidebar-link current">Development</a>
+                    
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Development-commands"><span class="toc-text">Development commands</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Styles"><span class="toc-text">Styles</span></a></li></ol>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar development-guide">
+    
+      <h1>Development</h1>
+    
+    <p>Wyvern’s development tools are using webpack so if you don’t have webpack installed globally run:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><div class="line"><span class="comment">#with yarn</span></div><div class="line">yarn global add webpack</div><div class="line"><span class="comment">#with npm</span></div><div class="line">npm install webpack -g</div></pre></td></tr></table></figure>
+<p>Webpack configuration is stored in <code>webpack.config.js</code></p>
+<h2 id="Development-commands"><a href="#Development-commands" class="headerlink" title="Development commands"></a>Development commands</h2><table>
+<thead>
+<tr>
+<th>command</th>
+<th>description</th>
+<th>using tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm run build</code></td>
+<td>Run task once</td>
+<td><code>webpack --config webpack.config.prod.js --progress --colors --display-error-details</code></td>
+</tr>
+<tr>
+<td><code>npm run dev</code></td>
+<td>Watch changes in files and run tasks</td>
+<td><code>webpack --config webpack.config.dev.js --progress --colors --display-error-details --watch</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><ul>
+<li>Styles could be written as Sass-like markup</li>
+<li>Styles could be stored in <code>style.scss</code> or inline in <code>.vue</code> templates</li>
+<li>Webpack watch for <code>.scss</code> files</li>
+<li>Styles are transforming to <code>.css</code> by <a href="https://github.com/postcss/postcss" target="_blank" rel="external">PostCSS</a></li>
+<li><a href="https://github.com/postcss/postcss" target="_blank" rel="external">PostCSS</a> configruation is stored in <code>postcss.config.js</code></li>
+<li><a href="https://github.com/postcss/postcss" target="_blank" rel="external">PostCSS</a> uses <a href="https://github.com/postcss/postcss-scss" target="_blank" rel="external">PostCSS SCSS</a> as parser and <a href="https://github.com/jonathantneal/precss" target="_blank" rel="external">PreCSS</a>, <a href="https://github.com/assetsjs/postcss-assets" target="_blank" rel="external">PostCSS-Assets</a>, <a href="https://github.com/postcss/postcss-calc" target="_blank" rel="external">PostCSS-Calc</a> as plugins </li>
+</ul>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/plugins.html">Plugins</a></span>
+        
+        
+      </div>
+    
+    <div class="footer">
+
+        <hr>
+
+      <a href="https://github.com/madesane/wyvern-docs/blob/master/source/development.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+        </div>
+        <script src="https://madesane.github.io/wyvern-docs/js/smooth-scroll.min.js"></script>
+
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="https://madesane.github.io/wyvern-docs/js/common.js"></script>
+    </body>
+</html>

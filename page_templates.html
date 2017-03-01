@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Page templates — Wyvern</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Page templates — Wyvern">
+        <meta property="og:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta property="og:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+
+
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Page templates — Wyvern">
+        <meta name="twitter:description" content="Wyvern - wordpress vue theme boilerplate">
+        <meta name="twitter:image" content="https://madesane.github.io/wyvern-docs/images/logo.png">
+
+        <link rel="icon" href="https://madesane.github.io/wyvern-docs/images/favicon.png" type="image/x-icon">
+
+        <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono' rel='stylesheet' type='text/css'>
+        <!-- main page styles -->
+        <link rel="stylesheet" href="/css/style.css">
+
+        <link rel="stylesheet" href="https://madesane.github.io/wyvern-docs/css/style.css">
+
+        <!-- ga -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-91648783-1', 'madesane.github.io/wyvern-docs');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body class="docs">
+        <div id="header">
+  <a id="logo" href="https://madesane.github.io/wyvern-docs/">
+    <img src="https://madesane.github.io/wyvern-docs/images/logo.svg" height="30" width="151">
+  </a>
+  <ul id="nav">
+    <li><a href="https://madesane.github.io/wyvern-docs/" class="nav-link current">Guide</a></li>
+<li><a href="https://madesane.github.io/wyvern-docs/showcase/" class="nav-link">Showcase</a></li>
+<li><a href="https://github.com/madesane/wyvern" class="nav-link nav-link__github" target="_blank">Github</a></li>
+  </ul>
+</div>
+
+
+        <div id="main" class="fix-sidebar">
+                
+    <div class="sidebar">
+    <div class="list">
+        <h2>
+            Guide
+        </h2>
+        <ul class="menu">
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/index.html" class="sidebar-link">Installation</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/folder_structure.html" class="sidebar-link">Folder structure</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/mixins.html" class="sidebar-link">Mixin methods</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/events.html" class="sidebar-link">Events</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/routes.html" class="sidebar-link">Routes</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/page_templates.html" class="sidebar-link current">Page templates</a>
+                    
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Register-page-templates"><span class="toc-text">Register page templates</span></a></li></ol>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/plugins.html" class="sidebar-link">Plugins</a>
+                    
+                </li>
+            
+                
+                <li>
+                    <a href="https://madesane.github.io/wyvern-docs/development.html" class="sidebar-link">Development</a>
+                    
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+<div class="content guide with-sidebar page_templates-guide">
+    
+      <h1>Page templates</h1>
+    
+    <h2 id="Register-page-templates"><a href="#Register-page-templates" class="headerlink" title="Register page templates"></a>Register page templates</h2><p>Declare <strong>get_virtual_templates()</strong> function in your theme’s functions.php. This function should return array value.</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><div class="line"><span class="keyword">if</span> ( !function_exists(<span class="string">'get_virtual_templates'</span>) )</div><div class="line">&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">get_virtual_templates</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> [</div><div class="line">            <span class="string">'custom'</span> =&gt; <span class="string">'Custom template'</span>,</div><div class="line">        ];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+      <div class="guide-links">
+        
+          <span>← <a href="/routes.html">Routes</a></span>
+        
+        
+          <span style="float:right"><a href="/plugins.html">Plugins</a> →</span>
+        
+      </div>
+    
+    <div class="footer">
+
+        <hr>
+
+      <a href="https://github.com/madesane/wyvern-docs/blob/master/source/page_templates.md" target="_blank">
+        Edit this page on Github!
+      </a>
+    </div>
+</div>
+
+        </div>
+        <script src="https://madesane.github.io/wyvern-docs/js/smooth-scroll.min.js"></script>
+
+
+        <!-- main custom script for sidebars, version selects etc. -->        
+        <script src="https://madesane.github.io/wyvern-docs/js/common.js"></script>
+    </body>
+</html>
