@@ -4,29 +4,17 @@ type: guide
 order: 7
 ---
 
-## Necessary
+## Plugin support
 
-* [WordPress REST API][rest-api]
-* [WP API Menus][wp-api-menus]
+We are continuously working on better support for all sorts of plugins. As of the REST based theme nature, most of the frontend heavy plugins need specific components. Here is some of those we know are supported and working in current version of Wyvern theme.
 
-## Recommended
+## Compatible plugins
 
-* [ACF Pro][acf]
-* [Akismet][akismet]
-* [Captcha][captcha]
-* [CPT UI][cptui]
-* [MailPoet Newsletters][mailpoet]
-* [Relative URL][relative-url]
-* [wpMandrill][wpmandrill]
+- [Advanced Custom Fields](https://wordpress.org/plugins/advanced-custom-fields/)
+- [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
+- [Intuitive CPO](https://wordpress.org/plugins/intuitive-custom-post-order/)
+- [Woocommerce](https://wordpress.org/plugins/woocommerce/)
 
-[acf-account]: https://www.advancedcustomfields.com/my-account/
-[akismet]: https://wordpress.org/plugins/akismet/
-[captcha]: https://wordpress.org/plugins/captcha/
-[rest-api]: https://wordpress.org/plugins/rest-api/
-[wp-api-menus]: https://wordpress.org/plugins/wp-api-menus/
-[relative-url]: https://wordpress.org/plugins/relative-url/
-[wpmandrill]: https://wordpress.org/plugins/wpmandrill/
-[mailpoet]: https://wordpress.org/plugins/wysija-newsletters/
-[acf]: https://wordpress.org/plugins/advanced-custom-fields/
-[cptui]: https://wordpress.org/plugins/custom-post-type-ui/
-[wordpress-download]:(https://wordpress.org/download/)
+## Requests
+
+As we work on support for different types of plugins, we appreciate suggestions what would you like to be supported, submit [Issues](https://github.com/madesane/wyvern) for that purpose.
